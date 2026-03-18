@@ -1,48 +1,98 @@
-# Educase
+# React Native Product Explorer App
 
-A React Native mobile application for browsing and searching products.
+## Overview
 
-## App Functionality
+This is a **React Native CLI-based mobile application** built as part of an assignment to demonstrate real-world app development practices.
 
-Educase is a product catalog app that allows users to:
-- Browse a paginated list of products fetched from a dummy API
-- Search products by title with real-time filtering
-- View detailed product information including images, descriptions, and pricing
-- Pull-to-refresh to reload the product list
-- Navigate between home list and product detail screens
+The app fetches product data from a public API and provides features like search, pagination, navigation, and responsive UI.
 
-## How to Run the Project
+---
 
-### Prerequisites
-- Node.js >= 22.11.0
-- React Native development environment set up (Android Studio for Android, Xcode for iOS)
-- For iOS: Ruby bundler and CocoaPods
+## Features
 
-### Installation
-1. Clone the repository and navigate to the project directory
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+* Product listing from API
+* Search functionality with debouncing
+* Infinite scrolling (pagination)
+* Global state management using Redux Toolkit
+* Performance optimized FlatList
+* Fully responsive UI (supports multiple screen sizes)
+* Image loading with fallback handling
+* Pull-to-refresh support
+* Error handling and empty states
+* Navigation between screens (Home → Details)
 
-### Running the App
+---
 
-1. Start Metro bundler:
-   ```bash
-   npm start
-   ```
+## Tech Stack
 
-2. In a new terminal, run on Android:
-   ```bash
-   npm run android
-   ```
+* React Native (CLI)
+* Redux Toolkit
+* React Navigation
+* JavaScript (ES6+)
+* Fetch API
+* Navigation
 
-3. Or run on iOS (first time setup):
-   ```bash
-   bundle install
-   bundle exec pod install
-   npm run ios
-   ```
+---
+
+## Folder Structure
+
+```
+src/
+ ├── api/            # API service layer
+ ├── components/     # Reusable UI components
+ ├── hooks/          # Custom hooks (debounce)
+ ├── redux/          # Redux store & slices
+ ├── screens/        # App screens
+ ├── utils/          # Helpers (responsive scaling)
+```
+
+---
+
+## APK Download
+
+**Download APK:**
+(Google Drive link):
+
+https://drive.google.com/file/d/10bYWRX13aBF-vQM8jVAAXbC2BIM6Id7F/view?usp=sharing
+
+> This APK can be installed directly on any Android device.
+
+---
+
+## How to Run Locally
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/Naveen05-lang/EDUCASE.git
+cd EDUCASE
+```
+
+---
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+---
+
+### 3. Start Metro
+
+```
+npx react-native start
+```
+
+---
+
+### 4. Run Android app
+
+```
+npx react-native run-android
+```
+
+---
 
 ## Key Technical Decisions
 
@@ -55,6 +105,20 @@ Educase is a product catalog app that allows users to:
 - **Image Fallback**: Graceful handling of failed image loads with placeholder
 - **Pagination**: Infinite scroll with load-more functionality
 
+
+## Deployment
+
+In React Native (CLI), apps are not deployed via a public URL like web applications. Instead, they are distributed as installable builds such as APK (Android) or IPA (iOS).
+
+For this assignment, I have provided:
+
+* A production-ready APK file that can be installed directly on an Android device
+* A complete GitHub repository with the source code
+
+If required, this app can also be deployed to the Google Play Store or Apple App Store by configuring signing and store metadata.
+
+---
+
 ## Improvements with More Time
 
 - **Caching**: Implement persistent storage for offline product browsing
@@ -65,5 +129,12 @@ Educase is a product catalog app that allows users to:
 - **Performance**: Implement virtualization for large lists, image optimization
 - **Authentication**: User accounts and personalized experiences
 - **Push Notifications**: Alerts for new products or price changes
+
+## Conclusion
+
+This project demonstrates the ability to build scalable, performant, and production-ready mobile applications using React Native.
+
+---
+
 
 
