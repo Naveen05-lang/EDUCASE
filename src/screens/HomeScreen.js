@@ -17,7 +17,6 @@ import Loader from '../components/Loader';
 import ErrorView from '../components/ErrorView';
 import EmptyView from '../components/EmptyView';
 import useDebounce from '../hooks/useDebounce';
-// import { saveProducts, loadProducts } from '../utils/storage';
 import { scale } from '../utils/responsive';
 
 const HomeScreen = ({ navigation }) => {
@@ -30,27 +29,16 @@ const HomeScreen = ({ navigation }) => {
 
   useEffect(() => {
     const init = async () => {
-      // const cached = await loadProducts();
-      // if (cached.length) {
-      //   dispatch(setProducts(cached));
-      // } else {
-      //   dispatch(fetchProducts(1));
-      // }
-
-      // Direct API call instead
-      dispatch(fetchProducts(1));
-      
+      dispatch(fetchProducts(1));      
     };
     init();
   }, []);
 
   useEffect(() => {
-    // saveProducts(list);
   }, [list]);
 
   useEffect(() => {
     const sub = AppState.addEventListener('change', (state) => {
-      // if (state === 'background') saveProducts(list);
     });
     return () => sub.remove();
   }, [list]);

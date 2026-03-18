@@ -1,14 +1,17 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { enableScreens } from 'react-native-screens';
 
 import { store } from './src/redux/store';
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+enableScreens();
 
 const Stack = createNativeStackNavigator();
 

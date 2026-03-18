@@ -25,7 +25,7 @@ const DetailsScreen = ({ route }) => {
       <Image
         source={
           error
-            ? require('../assets/fallback.png')
+            ? require('../assets/fallback.jpg')
             : { uri: item.thumbnail }
         }
         onError={() => setError(true)}
